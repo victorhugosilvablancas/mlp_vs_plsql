@@ -1,6 +1,3 @@
-package disverexpressdw;
-
-import static disverexpressdw.Librerias.Driver;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -19,6 +16,7 @@ import java.util.List;
  * @author Victor Hugo Silva
  */
 public class mlp_datosbrutosdata {
+    private static final String adriver="oracle.jdbc.OracleDriver";
     private static final String aurl="jdbc:oracle:thin:@DATAWAREHOUSE:1521:XE";
     private static final String ausuario="MLP_USR";
     private static final String aclave="aBc1D23";
@@ -116,8 +114,8 @@ public class mlp_datosbrutosdata {
             pw.println(mlp_datosbrutosdata.CABEZA);
             pw.println(mlp_datosbrutosdata.TIPOS);
             
-            Class.forName(Driver);
-            Connection conn = DriverManager.getConnection(aurl,NOT_AUTORIZED,UNKNOWN); 
+            Class.forName(adriver);
+            Connection conn = DriverManager.getConnection(aurl,UNKNOWN,UNKNOWN); 
             Statement stmt = conn.createStatement();
             ResultSet rs;
             String atabla;
@@ -194,7 +192,7 @@ public class mlp_datosbrutosdata {
      */
     public void Crear_tabla_recolectora() {
         try {
-            Class.forName(Driver);
+            Class.forName(adriver);
             Connection conn = DriverManager.getConnection(aurl,ausuario,aclave); 
             Statement stmt = conn.createStatement();
             
@@ -264,7 +262,7 @@ public class mlp_datosbrutosdata {
         try {
             System.out.println("5.Llenar tabla recolectora");
             
-            Class.forName(Driver);
+            Class.forName(adriver);
             Connection conn = DriverManager.getConnection(aurl,ausuario,aclave); 
             Statement stmt = conn.createStatement();
             
@@ -289,7 +287,7 @@ public class mlp_datosbrutosdata {
     }
     public void Consultar_con_PLSQL() {
         try {
-            Class.forName(Driver);
+            Class.forName(adriver);
             Connection conn = DriverManager.getConnection(aurl,ausuario,aclave); 
             Statement stmt = conn.createStatement();
 
@@ -355,11 +353,14 @@ public class mlp_datosbrutosdata {
         }
     }
     public void Todos() {
+        /*
         Extraer_datos_brutos();
         System.out.println(CreaEsquema());
         Crear_tabla_recolectora();
         Leer_datos_brutos();
         Llenar_tabla_recolectora();
+        */
+        
         Consultar_con_PLSQL();
     }
     
