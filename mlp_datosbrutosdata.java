@@ -353,14 +353,11 @@ public class mlp_datosbrutosdata {
         }
     }
     public void Todos() {
-        /*
         Extraer_datos_brutos();
         System.out.println(CreaEsquema());
         Crear_tabla_recolectora();
         Leer_datos_brutos();
         Llenar_tabla_recolectora();
-        */
-        
         Consultar_con_PLSQL();
     }
     
