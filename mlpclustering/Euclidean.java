@@ -1,60 +1,33 @@
-package hugosql.mlpclustering;
-
-import java.util.Random;
+package dcc.uaq_mlpclustering;
 
 /**
  *
  * @author Victor Hugo Silva Blancas
- * @institution Queretaro Autonomus University
- * @school Informatics Faculty
- * @course 2024 Computer Science Doctorate
+ * @institution Universidad Autónoma de Querétaro, México
+ * @school Facultad de Informática
+ * @course 2024 Doctorado en Ciencias de la Computación
  */
 public class Euclidean {
     
-    public static Double Distancia=0.0;
-    public static Double Direccion=0.0;
-    public static Double Asignacion=0.0;
-    
+    /**
+     * Clase que determina la distancia Euclidiana entre dos puntos y 3 dimensiones.
+     */
     public Euclidean() {
     }
     
     /**
-     * Euclidean Cartesian Distance
-     * @param Bx Xi primer punto de X
-     * @param Cx Xi+n segundo punto de X
-     * @param By Yi primer punto de Y
-     * @param Cy Yi+n segundo punto de Y
-     * @return Euclidean Distance for cartesian plane
-     */
-    public static Double CartesianDistance(Integer Bx,Integer Cx,Integer By,Integer Cy) {
-        
-        return Dcb;
-    }
-    /**
+     * Calcula la distancia euclideana en tres dimensiones para dos puntos.
      * 
-     * Euclidean Space Distance
-     * https://www.ecured.cu/Distancia_eucl%C3%ADdea
-     * @param Xa
-     * @param Xb
-     * @param Ya
-     * @param Yb
-     * @param Za
-     * @param Zb
-     * @return Euclidean Distance for space
+     * @param A Puntosdata a.
+     * @param B Puntosdata dataset.
+     * @return Distancia euclideana para 3 dimensiones.
      */
-    public static Double SpaceDistance(Double Xa,Double Xb,Double Ya,Double Yb,Double Za,Double Zb) {
-       
-        return Dab;
-    }
-    /**
-     * 
-     * Euclidean Space Distance
-     * @param a Puntosdata centroide
-     * @param b Puntosdata dataset
-     * @return Euclidean Distance for space
-     */
-    public static Double SpaceDistance(Coordenadasdata a,Coordenadasdata b) {
-        
+    public static Double SpaceDistance(Coordenadasdata A,Coordenadasdata B) {
+        Double Equis=(B.x-A.x)*(B.x-A.x);
+        Double Ye=(B.y-A.y)*(B.y-A.y);
+        Double Zeta=(B.z-A.z)*(B.z-A.z);
+        Double AB = Equis+Ye+Zeta;
+        Double Dab = Math.sqrt(AB);
         return Dab;
     }
     
