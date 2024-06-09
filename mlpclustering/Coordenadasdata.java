@@ -26,9 +26,7 @@ public class Coordenadasdata {
      * 
      */
     public Coordenadasdata() {
-        x=0.0;
-        y=0.0;
-        z=0.0;
+        ...
     }
     /**
      * Clase que define las coordenas (x,y,z).
@@ -38,9 +36,7 @@ public class Coordenadasdata {
      * @param aequis valor inicial de x.
      */
     public Coordenadasdata(String aequis) {
-        x=Double.valueOf(aequis);
-        y=0.0;
-        z=0.0;
+        ...
     }
     /**
      * Devuelve cadena formateada de los valores (x,y,z).
@@ -48,7 +44,7 @@ public class Coordenadasdata {
      * @return cadena con los valores (x,y,z).
      */
     public String cadena() {
-        return String.format("(%.4f,%.4f,%.4f)", x,y,z);
+        ...
     }
     
 }

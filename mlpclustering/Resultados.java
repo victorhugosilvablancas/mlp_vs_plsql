@@ -29,15 +29,14 @@ public class Resultados {
      * Inicia el conteo del tiempo.
      */
     public void Inicia() {
-        fini=new Timestamp(System.currentTimeMillis());
-        ffin=new Timestamp(System.currentTimeMillis());
+        ...
     }
     
     /**
      * Termina el conteo del tiempo.
      */
     public void Termina() {
-        ffin=new Timestamp(System.currentTimeMillis());
+        ...
     }
     
     /**
@@ -46,8 +45,7 @@ public class Resultados {
      * @return tiempo consumido en segundos.
      */
     public String getTiempo() {
-        Long ltiempo=ffin.getTime()-fini.getTime();
-        return String.format("%d msec", ltiempo.intValue());
+        ...
     }
     
 }

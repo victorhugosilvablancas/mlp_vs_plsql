@@ -13,6 +13,7 @@ public class Euclidean {
      * Clase que determina la distancia Euclidiana entre dos puntos y 3 dimensiones.
      */
     public Euclidean() {
+	...
     }
     
     /**
@@ -23,12 +24,7 @@ public class Euclidean {
      * @return Distancia euclideana para 3 dimensiones.
      */
     public static Double SpaceDistance(Coordenadasdata A,Coordenadasdata B) {
-        Double Equis=(B.x-A.x)*(B.x-A.x);
-        Double Ye=(B.y-A.y)*(B.y-A.y);
-        Double Zeta=(B.z-A.z)*(B.z-A.z);
-        Double AB = Equis+Ye+Zeta;
-        Double Dab = Math.sqrt(AB);
-        return Dab;
+        ...
     }
     
     

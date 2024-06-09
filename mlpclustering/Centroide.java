@@ -23,17 +23,7 @@ public class Centroide {
      * @return El valor del centroide.
      */
     public static Double CentroideDe(Double[][] X,Integer ik) {
-        Double centroide=0.0;
-        Double rsumaDeXenCk=0.0;
-        Integer ipuntostotales=0;
-        for (int i=0;i<X.length;i++) {
-            if (X[i][1].equals(ik.doubleValue())) {
-                rsumaDeXenCk+=X[i][0];
-                ipuntostotales++;
-            }
-        }
-        centroide=rsumaDeXenCk/ipuntostotales;
-        return centroide;
+        
     }
     
     /**
@@ -45,15 +35,7 @@ public class Centroide {
      * @return La suma de errores al cuadrado.
      */
     public static Double SumaDeErroresCuadrados(Double[][] X,Integer ik) {
-        Double rsuma=0.0;
-        Double error=0.0;
-        for (int i=0;i<X.length;i++) {
-            if (X[i][1].equals(ik.doubleValue())) {
-                error=X[i][0]-CentroideDe(X,ik);
-                rsuma+=Math.pow(error, 2);
-            }
-        }
-        return rsuma;
+        
     }
     /**
      * 
@@ -65,11 +47,7 @@ public class Centroide {
      * @return La posición del centroide del triángulo (A,B,C).
      */
     public static Coordenadasdata CentroideTriangular(Coordenadasdata A,Coordenadasdata B,Coordenadasdata C) {
-        Coordenadasdata midato=new Coordenadasdata();
-        midato.x=(A.x+B.x+C.x)/3;
-        midato.y=(A.y+B.y+C.y)/3;
-        midato.z=(A.z+B.z+C.z)/3;
-        return midato;
+        
     }
     
     /**
@@ -85,9 +63,7 @@ public class Centroide {
      * @return La posición del centroide del triángulo (A,B,C).
      */
     public static String CentroideTriangular(Double Ax,Double Ay,Double Bx,Double By,Double Cx,Double Cy) {
-        Double equis=(Ax+Bx+Cx)/3;
-        Double ye=(Ay+By+Cy)/3;
-        return String.format("Centroide = (%.4f,%.4f)", equis, ye);
+        
     }
     
 }
