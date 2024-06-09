@@ -13,6 +13,7 @@ public class Centroide {
      * Clase que define el valor del centroide.
      */
     public Centroide() {
+	...
     }
     /**
      * 
@@ -23,7 +24,7 @@ public class Centroide {
      * @return El valor del centroide.
      */
     public static Double CentroideDe(Double[][] X,Integer ik) {
-        
+        ...
     }
     
     /**
@@ -35,7 +36,7 @@ public class Centroide {
      * @return La suma de errores al cuadrado.
      */
     public static Double SumaDeErroresCuadrados(Double[][] X,Integer ik) {
-        
+        ...
     }
     /**
      * 
@@ -47,7 +48,7 @@ public class Centroide {
      * @return La posición del centroide del triángulo (A,B,C).
      */
     public static Coordenadasdata CentroideTriangular(Coordenadasdata A,Coordenadasdata B,Coordenadasdata C) {
-        
+        ...
     }
     
     /**
@@ -63,7 +64,7 @@ public class Centroide {
      * @return La posición del centroide del triángulo (A,B,C).
      */
     public static String CentroideTriangular(Double Ax,Double Ay,Double Bx,Double By,Double Cx,Double Cy) {
-        
+        ...
     }
     
 }
